@@ -12,6 +12,10 @@ Claude Code session picks them up via the symlink at `~/.claude/skills/`.
   sentence surgery checks, a mechanical checklist, and a fill-in-the-blank template.
   Distilled from forensic dissections of fifteen abstracts by leading ML researchers
   plus research on abstract-writing craft.
+- **intro-related-writing/** — how to write the Introduction and Related Work: the
+  seven-question funnel, three intro recipes, the credit-then-contrast pattern for
+  positioning against rivals, and mechanical checklists. Same source dissections plus
+  research on intro and related-work craft.
 
 ## Conventions
 
