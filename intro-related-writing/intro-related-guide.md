@@ -147,9 +147,63 @@ paragraph must end in a clause about YOUR method.
 
 ---
 
-## Part 5 — The assembly line
+## Part 5 — The contributions list, drilled down
 
-1. **Write the contribution bullets** (refutable claims, bold first lines).
+The contributions list is the most-skimmed six lines of the paper: reviewers read the
+bold text, decide what you are claiming, and grade the paper against it.
+
+**The doctrine: write it first, and let it drive the paper.** Every section exists to
+substantiate a bullet; anything that substantiates no bullet is a cut candidate. Each
+bullet forward-references the section that proves it.
+
+**The refutability test (the one test that matters).** A contribution is a CLAIM
+someone could prove wrong, not a description of effort:
+
+| Fails the test | Passes |
+|---|---|
+| "We describe a system for X." | "An architecture that separates what prior systems fuse." |
+| "We explore the role of Y." | "The system infers the objective without supervision on N percent of cases (a of b)." |
+| "We evaluate extensively." | "An audited evaluation: [high] vs [low], with a [mid] ablation." |
+
+If a bullet cannot be wrong, it is not a contribution — rewrite until it can.
+
+**The anatomy of one bullet:**
+1. Bold lead line = the claim itself, a noun phrase stating the DIFFERENCE or the
+   FINDING — never a topic ("An architecture for X" is a topic; "An architecture that
+   [does what rivals do not]" is a claim).
+2. Two or three support sentences with a "We [verb]" spine.
+3. Numbers attached to their exact objects, in pairs.
+4. Optional forward reference to the proving section.
+
+**One bullet per TYPE, mapped one-to-one onto the gap.** Mix contribution types instead
+of listing three features: the **idea** (artifact / named concept), the **science** (a
+measurement or finding the community keeps even if they ignore your system), the
+**evidence** (the evaluation, with its integrity story). And the bullets answer the
+intro's named costs in the same order, so the reader sees each fix slot into its hole.
+
+**Bullets or prose?** The dissected authors split: one always writes contributions as
+prose (First / Second / Finally), one enumerates freely, one uses either. The
+tiebreaker: match the format your likeliest expert reviewer's own papers use.
+
+**Claiming firsts.** Narrow and factual ("the first audited evaluation of X on the
+full public benchmark"), never a boast — and only after checking the claim against
+every rival you cite.
+
+**The contributions checklist:**
+- [ ] Written BEFORE the intro prose; every intro paragraph earns a bullet
+- [ ] Each bold line states a refutable claim, not a topic
+- [ ] One bullet per type: idea / science / evidence
+- [ ] Bullets answer the intro's named costs, in the same order
+- [ ] Every number attached to its exact object; no orphan statistics
+- [ ] Each bullet maps to the section that proves it
+- [ ] Primacy claims narrow, factual, checked against every cited rival
+- [ ] Skim test: reading ONLY the bold lines states the whole paper
+
+---
+
+## Part 6 — The assembly line
+
+1. **Write the contribution bullets** (refutable claims, bold first lines — Part 5).
 2. **Pick a recipe** (A quiet build / B answer-first / C familiar anchor) by what your
    paper's star is: the idea, the number, or the extension.
 3. **Draft the seven funnel paragraphs**, one per question, ugly first pass.
