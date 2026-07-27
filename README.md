@@ -28,6 +28,12 @@ Claude Code session picks them up via the symlink at `~/.claude/skills/`.
   claim-stating captions, drill-down, number discipline), and mechanical checklists
   including the "never in a results section" list. Same source dissections plus
   research on results-section craft.
+- **caption-writing/** — how to write figure, table, and algorithm captions: the
+  name -> decode -> land recipe, the flagship-claims/workhorse-describes split,
+  self-containment over deduplication, paired-number discipline, the five
+  judgment calls where the authors diverge, and a checklist, with worked
+  examples on a toy system. Same source dissections plus research on
+  figure-caption craft (Kording & Mensh).
 - **conclusion-writing/** — how to write the Conclusion: the two-move envoi shape,
   the reprise-not-report rule, the flip-the-shortfall move, the refutable-vista
   close, three conclusion recipes with fill-in templates, and mechanical checklists
