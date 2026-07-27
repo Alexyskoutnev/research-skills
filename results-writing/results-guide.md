@@ -362,3 +362,10 @@ the "one map against one map" fairness that stands in for error-bar-free honesty
 6. **Write Limitations inside Results:** terse, each boundary routed to open work.
 7. **Run both checklists in Part 4.** No naked/unpaired number, every number glued
    to its object; no method re-introduction, no survey.
+
+---
+
+**Semicolon rule (addendum).** A semicolon is earned only by a true antithesis or
+tightly parallel pair; everything else takes a period. Budget about two per section.
+After any editing pass, grep `;` — each survivor must name its antithesis or become a
+period.

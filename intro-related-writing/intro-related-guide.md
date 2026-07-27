@@ -213,3 +213,10 @@ every rival you cite.
 6. **Read intro + related work cold, in one pass.** A stranger should finish knowing
    your problem, your idea, your evidence, and exactly how you differ from the nearest
    system.
+
+---
+
+**Semicolon rule (addendum).** A semicolon is earned only by a true antithesis or
+tightly parallel pair; everything else takes a period. Budget about two per section.
+After any editing pass, grep `;` — each survivor must name its antithesis or become a
+period.

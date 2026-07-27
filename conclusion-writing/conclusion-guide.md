@@ -278,3 +278,10 @@ stored computation to fresh evidence."
    direction, not a result.
 7. **Close on the vista** — the transferable insight, measured and refutable,
    numbers pinned to objects, no new evidence crossing the boundary.
+
+---
+
+**Semicolon rule (addendum).** A semicolon is earned only by a true antithesis or
+tightly parallel pair; everything else takes a period. Budget about two per section.
+After any editing pass, grep `;` — each survivor must name its antithesis or become a
+period.

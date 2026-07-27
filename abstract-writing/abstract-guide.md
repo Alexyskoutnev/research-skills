@@ -205,3 +205,10 @@ AlphaGo, MuZero, DreamerV3, BERT, CLIP):
     differentiating clause is the entire allowance. Everything else goes in the body.
 12. **Read it cold, in one pass, as a stranger.** If that stranger cannot repeat your
     problem, your idea, and your evidence afterward, start over.
+
+---
+
+**Semicolon rule (addendum).** A semicolon is earned only by a true antithesis or
+tightly parallel pair; everything else takes a period. Budget about two per section.
+After any editing pass, grep `;` — each survivor must name its antithesis or become a
+period.

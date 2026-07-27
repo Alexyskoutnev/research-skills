@@ -378,3 +378,10 @@ finished method section takes.
   stitching checked subroutes and searching only where the cache misses" — and the
   pre-named ablation ("without the cache"), then straight into Experiments. No
   solve-rate crosses the boundary.
+
+---
+
+**Semicolon rule (addendum).** A semicolon is earned only by a true antithesis or
+tightly parallel pair; everything else takes a period. Budget about two per section.
+After any editing pass, grep `;` — each survivor must name its antithesis or become a
+period.
