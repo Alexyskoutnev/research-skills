@@ -16,6 +16,11 @@ Claude Code session picks them up via the symlink at `~/.claude/skills/`.
   seven-question funnel, three intro recipes, the credit-then-contrast pattern for
   positioning against rivals, and mechanical checklists. Same source dissections plus
   research on intro and related-work craft.
+- **method-writing/** — how to write the Method section: the N-named-parts skeleton,
+  the setup-banks-notation rule, the star-component discipline, three method recipes
+  with fill-in templates, the devices recipe (figure, algorithm box, running example,
+  notation hygiene), and mechanical checklists including the "never in a method
+  section" list. Same source dissections plus research on method-section craft.
 
 ## Conventions
 
