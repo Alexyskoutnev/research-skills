@@ -21,6 +21,18 @@ Claude Code session picks them up via the symlink at `~/.claude/skills/`.
   with fill-in templates, the devices recipe (figure, algorithm box, running example,
   notation hygiene), and mechanical checklists including the "never in a method
   section" list. Same source dissections plus research on method-section craft.
+- **results-writing/** — how to write the Experimental Results section: the
+  claims-discharged-by-numbers skeleton, the claim-headed paragraph rule, the
+  measurement-over-scoreboard weighting, the named-component lesion for ablations,
+  three results recipes with fill-in templates, the devices recipe (purpose opener,
+  claim-stating captions, drill-down, number discipline), and mechanical checklists
+  including the "never in a results section" list. Same source dissections plus
+  research on results-section craft.
+- **conclusion-writing/** — how to write the Conclusion: the two-move envoi shape,
+  the reprise-not-report rule, the flip-the-shortfall move, the refutable-vista
+  close, three conclusion recipes with fill-in templates, and mechanical checklists
+  including the "never in a conclusion" list. Same source dissections plus research
+  on conclusion-section craft.
 
 ## Conventions
 
