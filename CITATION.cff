@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "research-skills: agent skills for writing machine learning papers"
+message: "If these skills help your paper, please cite this repository."
+type: software
+authors:
+  - family-names: Skoutnev
+    given-names: Alexy
+repository-code: "https://github.com/Alexyskoutnev/research-skills"
+abstract: >-
+  Nine agent skills covering the writing of a machine learning paper, from
+  abstract to rebuttal. Each skill pairs a recipe and a set of documented
+  judgment calls with a mechanical checklist an agent runs before the section
+  ships. The skills are plain Markdown and load in any agent that reads a
+  SKILL.md file.
+keywords:
+  - agent-skills
+  - claude-code
+  - academic-writing
+  - scientific-writing
+  - paper-writing
+  - machine-learning
+license: MIT
+version: 1.0.0
+date-released: "2026-08-06"
