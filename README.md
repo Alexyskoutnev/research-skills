@@ -56,10 +56,12 @@ cp -r research-skills/abstract-writing ~/.claude/skills/
 cp -r research-skills/sentence-audit  ~/.claude/skills/
 
 # or take all ten, personally:
-cp -r research-skills/*-writing research-skills/sentence-audit ~/.claude/skills/
+cp -r research-skills/*-writing research-skills/sentence-audit \
+      research-skills/figure-creation ~/.claude/skills/
 
 # or scope them to one project instead:
-cp -r research-skills/*-writing <your-project>/.claude/skills/
+cp -r research-skills/*-writing research-skills/sentence-audit \
+      research-skills/figure-creation <your-project>/.claude/skills/
 ```
 
 Then in Claude Code:
@@ -118,6 +120,34 @@ method-writing/
 the long form: worked recipes, fill-in templates, the "never do this in a method section" lists,
 and the reasoning behind each rule so you can overrule it deliberately.
 </details>
+
+## 🤖 The linter
+
+Most of the rules in this repo are mechanical, which means a script can check them. `scripts/audit.py`
+runs the checkable ones over a `.tex` or `.md` file. No dependencies, standard library only.
+
+```bash
+python3 scripts/audit.py paper.tex
+python3 scripts/audit.py --rules                    # every rule, and which skill it comes from
+python3 scripts/audit.py paper.tex --only bare-this
+python3 scripts/audit.py paper.tex --quiet          # exit code only, for a pre-commit hook
+```
+
+```
+paper.tex:118  [bare-this]
+    This
+    bare demonstrative: name the noun it points at
+paper.tex:118  [lonely-number]
+    93.3
+    lonely number: pair it with what it beats
+```
+
+It strips math, figures, listings, and comments before reading, so it audits prose rather than
+markup. It flags bare demonstratives, hedges, lonely numbers, agentless passives, dead nouns,
+captions that announce themselves, vague future work, and sentences that outran their point.
+
+It exits 1 when anything is flagged. The remaining rules in the guides are judgment calls, and
+those are what the agent is for.
 
 ## 🔗 How they chain
 
@@ -230,8 +260,8 @@ That is why the rules are oddly specific. "Numbers travel in pairs" is in there 
 number drew a comment. "No bare This" is in there because an advisor circled one.
 ## 🪶 Why it's plain Markdown
 
-No framework. No dependencies. No database, daemon, or config to maintain. Nine folders, each with a
-`SKILL.md` any LLM can read.
+No framework. No dependencies. No database, daemon, or config to maintain. Ten folders, each with a
+`SKILL.md` any LLM can read, plus one script that checks the mechanical rules for you.
 Fork it and overrule the parts you disagree with. The guides explain the reasoning behind each rule
 precisely so you can. A house style you cannot argue with is not a house style, it is a cage.
 ## 📐 Conventions
