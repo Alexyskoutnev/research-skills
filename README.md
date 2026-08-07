@@ -4,13 +4,13 @@
 
 <br/>
 
-[![Skills](https://img.shields.io/badge/skills-9-3E7DE8?style=flat-square)](#-the-skills)
+[![Skills](https://img.shields.io/badge/skills-10-3E7DE8?style=flat-square)](#-the-skills)
 [![Format](https://img.shields.io/badge/format-Agent%20Skills-1A2230?style=flat-square)](#-quick-start)
 [![Markdown only](https://img.shields.io/badge/deps-none-2E9E5B?style=flat-square)](#-why-its-plain-markdown)
 [![License](https://img.shields.io/badge/license-MIT-6E8BB8?style=flat-square)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/Alexyskoutnev/research-skills?style=flat-square&color=E8B33E)](https://github.com/Alexyskoutnev/research-skills/stargazers)
 
-**Nine Claude Code skills for writing an ML paper, abstract to rebuttal.**
+**Ten Claude Code skills for writing an ML paper, abstract to rebuttal.**
 Not prompts. Recipes, axioms, and mechanical checklists, reverse-engineered from papers that got in.
 </div>
 
@@ -55,7 +55,7 @@ mkdir -p ~/.claude/skills
 cp -r research-skills/abstract-writing ~/.claude/skills/
 cp -r research-skills/sentence-audit  ~/.claude/skills/
 
-# or take all nine, personally:
+# or take all ten, personally:
 cp -r research-skills/*-writing research-skills/sentence-audit ~/.claude/skills/
 
 # or scope them to one project instead:
@@ -96,6 +96,7 @@ if the agent wants more than the operating summary.
 | **intro-related-writing** | Seven-question funnel, contributions-first, credit-then-contrast for rivals | Your related work reads like an annotated bibliography |
 | **method-writing** | N-named-parts skeleton, star-component discipline, algorithm-box and figure devices | The method is complete but nobody can reimplement it |
 | **results-writing** | Claim-headed paragraphs, lesion ablations, measurement over scoreboard | Results list numbers rather than discharging claims |
+| **figure-creation** | One-job rule, form heuristic, Figma and matplotlib tracks, column width, color accessibility | The figure is decoration, or it turns to mush in print |
 | **caption-writing** | Name → decode → land, flagship-vs-workhorse split, figure-text exactness | A skimming reviewer gets nothing from your figures |
 | **conclusion-writing** | Envoi shape, reprise-not-report, flip-the-shortfall, refutable-vista close | The conclusion restates the abstract and stops |
 | **supplement-writing** | Evidence-locker rule, verbatim exhibits, prose-first exhibits-last order | The appendix is a junk drawer, not an audit trail |
@@ -128,7 +129,8 @@ flowchart LR
     B --> C["method<br/>writing"]
     C --> D["results<br/>writing"]
     D --> E["conclusion<br/>writing"]
-    D -.-> F["caption<br/>writing"]
+    D -.-> P["figure<br/>creation"]
+    P -.-> F["caption<br/>writing"]
     E --> G["supplement<br/>writing"]
     F -.-> H
     G --> H["sentence<br/>audit"]
@@ -141,7 +143,7 @@ flowchart LR
     classDef ship  fill:#0F2A1C,stroke:#2E9E5B,color:#8FE0AC
     classDef gate  fill:#2A1C0F,stroke:#E8B33E,color:#F0CE86
     class A,B,C,D,E build
-    class F,G evid
+    class F,G,P evid
     class H,R ship
     class S gate
 ```
@@ -250,9 +252,7 @@ If your skill encodes a rule, say where the rule came from.
 ## 📄 License
 
 MIT. See [LICENSE](LICENSE).
-`rebuttal-writing` takes its structural outline (staged triage, severity classes, output modes) from
-[TobiasLee/Rebuttal-Skill](https://github.com/TobiasLee/Rebuttal-Skill); that repo carries no license,
-so the skill is written entirely in original wording.
+
 ---
 
 <div align="center">

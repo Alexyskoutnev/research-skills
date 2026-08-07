@@ -10,7 +10,7 @@ equally; it is to identify the few doubts that decide acceptance and resolve
 those with evidence. So the skill runs in two stages: triage first, drafting
 only after results exist. When the author supplies only reviews, scores, and
 an abstract, produce the triage and plan, never the finished rebuttal.
-Structure adapted (in original wording) from TobiasLee/Rebuttal-Skill.
+
 ## Stage 0: Is a rebuttal worth writing?
 
 Before planning any experiment, decide whether the rebuttal or a resubmission
