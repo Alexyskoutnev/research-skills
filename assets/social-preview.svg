@@ -1,41 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-label="research-skills: a linter flags a bare This and the fix below it">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-label="research-skills pipeline: write, evidence, ship">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0C1220"/>
-      <stop offset="55%" stop-color="#152134"/>
-      <stop offset="100%" stop-color="#0E1826"/>
-    </linearGradient>
-    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#3E7DE8" stop-opacity="0.24"/>
-      <stop offset="100%" stop-color="#3E7DE8" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="glow2" x1="0" y1="1" x2="1" y2="0">
-      <stop offset="0%" stop-color="#2E9E5B" stop-opacity="0.20"/>
-      <stop offset="100%" stop-color="#2E9E5B" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#0B1120"/><stop offset="60%" stop-color="#131E31"/><stop offset="100%" stop-color="#0D1727"/>
     </linearGradient>
   </defs>
+  <rect width="1600" height="800" fill="url(#bg)"/>
 
-  <rect width="1280" height="640" fill="url(#bg)"/>
-  <circle cx="1200" cy="50" r="330" fill="url(#glow)"/>
-  <circle cx="80" cy="620" r="280" fill="url(#glow2)"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif">
+    <text x="120" y="118" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="23" letter-spacing="6.5" fill="#6E8BB8">TEN SKILLS, ONE PER PAPER SECTION</text>
 
-  <text x="110" y="112" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
-        font-size="21" letter-spacing="5.5" fill="#6E8BB8">ONE DEFECT A SCRIPT CAN CATCH</text>
+    <!-- column 1 -->
+    <g transform="translate(120,180)">
+      <rect width="420" height="440" rx="16" fill="#141F33" stroke="#2B3D5E" stroke-width="1.5"/>
+      <text x="36" y="66" font-size="30" font-weight="700" letter-spacing="3.5" fill="#6FA0F0">WRITE</text>
+      <line x1="36" y1="92" x2="384" y2="92" stroke="#2B3D5E" stroke-width="1.5"/>
+      <g font-size="30" fill="#CBD9EC">
+        <text x="36" y="150">abstract</text>
+        <text x="36" y="212">intro + related</text>
+        <text x="36" y="274">method</text>
+        <text x="36" y="336">results</text>
+        <text x="36" y="398">conclusion</text>
+      </g>
+    </g>
 
-  <text x="110" y="272" font-family="Palatino, 'Palatino Linotype', Georgia, 'Times New Roman', serif"
-        font-size="64" fill="#E9F0FA">This shows the model generalizes.</text>
+    <!-- column 2 -->
+    <g transform="translate(590,180)">
+      <rect width="420" height="316" rx="16" fill="#141F33" stroke="#2B3D5E" stroke-width="1.5"/>
+      <text x="36" y="66" font-size="30" font-weight="700" letter-spacing="3.5" fill="#8FA8C6">EVIDENCE</text>
+      <line x1="36" y1="92" x2="384" y2="92" stroke="#2B3D5E" stroke-width="1.5"/>
+      <g font-size="30" fill="#CBD9EC">
+        <text x="36" y="150">figures</text>
+        <text x="36" y="212">captions</text>
+        <text x="36" y="274">supplement</text>
+      </g>
+    </g>
 
-  <g stroke="#FF4A4A" fill="none" stroke-linecap="round" stroke-width="4.5" opacity="0.95">
-    <path d="M 254 236 C 254 212, 217 198, 174 200 C 128 202, 98 219, 98 244 C 98 270, 133 287, 180 285 C 225 283, 257 266, 254 240 C 252 222, 230 210, 200 206"/>
+    <!-- column 3 -->
+    <g transform="translate(1060,180)">
+      <rect width="420" height="378" rx="16" fill="#10281C" stroke="#2E7A4E" stroke-width="1.5"/>
+      <text x="36" y="66" font-size="30" font-weight="700" letter-spacing="3.5" fill="#5BC985">SHIP</text>
+      <line x1="36" y1="92" x2="384" y2="92" stroke="#2E7A4E" stroke-width="1.5"/>
+      <g font-size="30" fill="#CBD9EC">
+        <text x="36" y="150">sentence-audit</text>
+        <text x="36" y="212">rebuttal</text>
+      </g>
+      <text x="36" y="300" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+            font-size="21" fill="#7FCFA0">$ audit.py paper.tex</text>
+      <text x="36" y="336" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+            font-size="21" fill="#8FA8C6">118: [bare-this]</text>
+    </g>
+
+    <!-- connectors -->
+    <g stroke="#4A6088" stroke-width="2.5" fill="none">
+      <path d="M 548 340 L 578 340"/><path d="M 578 340 L 566 332"/><path d="M 578 340 L 566 348"/>
+      <path d="M 1018 340 L 1048 340"/><path d="M 1048 340 L 1036 332"/><path d="M 1048 340 L 1036 348"/>
+    </g>
+
+    <text x="120" y="700" font-size="54" font-weight="700" letter-spacing="-1.4" fill="#F2F6FC">research-skills</text>
+    <text x="120" y="744" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="27" fill="#8FA8C6">github.com/Alexyskoutnev/research-skills</text>
   </g>
-
-  <text x="110" y="378" xml:space="preserve" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="28" fill="#7E93B4">paper.tex:118  <tspan fill="#FF4A4A" font-weight="700">[bare-this]</tspan><tspan fill="#C2D2E6">  name the noun it points at</tspan></text>
-
-  <text x="110" y="492" font-family="Palatino, 'Palatino Linotype', Georgia, 'Times New Roman', serif"
-        font-size="64" fill="#8FA8C6">This <tspan fill="#4ECA82" font-weight="700">gap</tspan> shows the model generalizes.</text>
-
-  <text x="110" y="572" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif"
-        font-size="46" font-weight="700" letter-spacing="-1.2" fill="#F2F6FC">research-skills</text>
-  <text x="110" y="608" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif"
-        font-size="24" fill="#8FA8C6">ten skills for writing an ML paper, abstract to rebuttal</text>
 </svg>
