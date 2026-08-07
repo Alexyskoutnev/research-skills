@@ -92,7 +92,6 @@
     </g>
 
     <text x="100" y="712" font-size="76" font-weight="800" letter-spacing="-2.4" fill="#FFFFFF">research-skills</text>
-    <text x="100" y="770" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
-          font-size="38" fill="#8FA8C6">github.com/Alexyskoutnev/research-skills</text>
+    <text x="100" y="770" font-size="40" fill="#8FA8C6">ten skills for writing an ML paper</text>
   </g>
 </svg>
