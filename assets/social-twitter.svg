@@ -1,64 +1,98 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="research-skills: a three phase pipeline for writing an ML paper">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="research-skills lifecycle, eleven steps from abstract to rebuttal">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#060B16"/><stop offset="60%" stop-color="#0B1626"/><stop offset="100%" stop-color="#070D1A"/>
+      <stop offset="0%" stop-color="#070D18"/><stop offset="60%" stop-color="#0C1727"/><stop offset="100%" stop-color="#080F1C"/>
     </linearGradient>
   </defs>
   <rect width="1600" height="900" fill="url(#bg)"/>
 
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif">
+    <text x="100" y="86" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="27" letter-spacing="6" fill="#7E97BE">ABSTRACT TO REBUTTAL</text>
 
-    <text x="110" y="112" font-size="94" font-weight="800" letter-spacing="-3" fill="#FFFFFF">research-skills</text>
-    <text x="110" y="176" font-size="44" fill="#9FB6D4">ten skills for writing an ML paper</text>
-
-    <!-- WRITE -->
-    <g transform="translate(110,250)">
-      <rect width="440" height="466" rx="18" fill="#1D3053" stroke="#4E6E9E" stroke-width="3"/>
-      <text x="40" y="82" font-size="58" font-weight="800" letter-spacing="2" fill="#7FB0FF">WRITE</text>
-      <line x1="40" y1="116" x2="400" y2="116" stroke="#4E6E9E" stroke-width="3"/>
-      <g font-size="44" fill="#E6EFFA">
-        <text x="40" y="190">abstract</text>
-        <text x="40" y="254">intro + related</text>
-        <text x="40" y="318">method</text>
-        <text x="40" y="382">results</text>
-        <text x="40" y="446">conclusion</text>
-      </g>
+    <!-- ROW 1 -->
+    <g transform="translate(100,126)">
+      <rect width="440" height="106" rx="14" fill="#1A2C4C" stroke="#5A8AD8" stroke-width="3"/>
+      <text x="30" y="66" font-size="34" font-weight="700" fill="#5A8AD8">1</text>
+      <text x="76" y="66" font-size="44" fill="#EAF1FA">abstract</text>
+    </g>
+    <g transform="translate(580,126)">
+      <rect width="440" height="106" rx="14" fill="#1A2C4C" stroke="#5A8AD8" stroke-width="3"/>
+      <text x="30" y="66" font-size="34" font-weight="700" fill="#5A8AD8">2</text>
+      <text x="76" y="66" font-size="44" fill="#EAF1FA">intro + related</text>
+    </g>
+    <g transform="translate(1060,126)">
+      <rect width="440" height="106" rx="14" fill="#1A2C4C" stroke="#5A8AD8" stroke-width="3"/>
+      <text x="30" y="66" font-size="34" font-weight="700" fill="#5A8AD8">3</text>
+      <text x="76" y="66" font-size="44" fill="#EAF1FA">method</text>
     </g>
 
-    <!-- EVIDENCE -->
-    <g transform="translate(610,250)">
-      <rect width="440" height="466" rx="18" fill="#1D3053" stroke="#4E6E9E" stroke-width="3"/>
-      <text x="40" y="82" font-size="58" font-weight="800" letter-spacing="2" fill="#A9C0DC">EVIDENCE</text>
-      <line x1="40" y1="116" x2="400" y2="116" stroke="#4E6E9E" stroke-width="3"/>
-      <g font-size="44" fill="#E6EFFA">
-        <text x="40" y="190">figures</text>
-        <text x="40" y="254">captions</text>
-        <text x="40" y="318">supplement</text>
-      </g>
+    <!-- ROW 2 -->
+    <g transform="translate(100,266)">
+      <rect width="440" height="106" rx="14" fill="#1A2C4C" stroke="#5A8AD8" stroke-width="3"/>
+      <text x="30" y="66" font-size="34" font-weight="700" fill="#5A8AD8">4</text>
+      <text x="76" y="66" font-size="44" fill="#EAF1FA">results</text>
+    </g>
+    <g transform="translate(580,266)">
+      <rect width="440" height="106" rx="14" fill="#1B2740" stroke="#7E97BE" stroke-width="3"/>
+      <text x="30" y="66" font-size="34" font-weight="700" fill="#7E97BE">5</text>
+      <text x="76" y="66" font-size="44" fill="#D8E4F2">figures</text>
+    </g>
+    <g transform="translate(1060,266)">
+      <rect width="440" height="106" rx="14" fill="#1B2740" stroke="#7E97BE" stroke-width="3"/>
+      <text x="30" y="66" font-size="34" font-weight="700" fill="#7E97BE">6</text>
+      <text x="76" y="66" font-size="44" fill="#D8E4F2">captions</text>
     </g>
 
-    <!-- SHIP -->
-    <g transform="translate(1110,250)">
-      <rect width="440" height="466" rx="18" fill="#123E2B" stroke="#4FBE7E" stroke-width="3"/>
-      <text x="40" y="82" font-size="58" font-weight="800" letter-spacing="2" fill="#6FE5A2">SHIP</text>
-      <line x1="40" y1="116" x2="400" y2="116" stroke="#4FBE7E" stroke-width="3"/>
-      <g font-size="44" fill="#E6EFFA">
-        <text x="40" y="190">sentence-audit</text>
-        <text x="40" y="254">rebuttal</text>
-      </g>
-      <text x="40" y="360" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
-            font-size="34" fill="#7FE5A8">$ audit.py</text>
-      <text x="40" y="410" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
-            font-size="34" fill="#A9C0DC">[bare-this]</text>
+    <!-- ROW 3 -->
+    <g transform="translate(100,406)">
+      <rect width="440" height="106" rx="14" fill="#1A2C4C" stroke="#5A8AD8" stroke-width="3"/>
+      <text x="30" y="66" font-size="34" font-weight="700" fill="#5A8AD8">7</text>
+      <text x="76" y="66" font-size="44" fill="#EAF1FA">conclusion</text>
+    </g>
+    <g transform="translate(580,406)">
+      <rect width="440" height="106" rx="14" fill="#1B2740" stroke="#7E97BE" stroke-width="3"/>
+      <text x="30" y="66" font-size="34" font-weight="700" fill="#7E97BE">8</text>
+      <text x="76" y="66" font-size="44" fill="#D8E4F2">appendix</text>
+    </g>
+    <g transform="translate(1060,406)">
+      <rect width="440" height="106" rx="14" fill="#123A28" stroke="#46B575" stroke-width="3"/>
+      <text x="30" y="66" font-size="34" font-weight="700" fill="#46B575">9</text>
+      <text x="76" y="66" font-size="44" fill="#B6EFCE">sentence audit</text>
     </g>
 
-    <!-- connectors -->
-    <g stroke="#8FAAD2" stroke-width="6" fill="none" stroke-linecap="round">
-      <path d="M 560 483 L 598 483"/><path d="M 598 483 L 582 471"/><path d="M 598 483 L 582 495"/>
-      <path d="M 1060 483 L 1098 483"/><path d="M 1098 483 L 1082 471"/><path d="M 1098 483 L 1082 495"/>
+    <!-- ROW 4 -->
+    <g transform="translate(100,546)">
+      <rect width="440" height="106" rx="26" fill="#3A2A10" stroke="#E8B33E" stroke-width="3"/>
+      <text x="30" y="66" font-size="34" font-weight="700" fill="#E8B33E">10</text>
+      <text x="90" y="66" font-size="44" font-weight="700" fill="#F5D68C">submit</text>
+    </g>
+    <g transform="translate(580,546)">
+      <rect width="440" height="106" rx="14" fill="#123A28" stroke="#46B575" stroke-width="3"/>
+      <text x="30" y="66" font-size="34" font-weight="700" fill="#46B575">11</text>
+      <text x="90" y="66" font-size="44" fill="#B6EFCE">rebuttal</text>
     </g>
 
-    <text x="110" y="820" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
-          font-size="40" fill="#8FA8C6">github.com/Alexyskoutnev/research-skills</text>
+    <!-- resubmit loop -->
+    <g stroke="#8A6A2A" stroke-width="3.5" fill="none" stroke-dasharray="11 9" stroke-linecap="round">
+      <path d="M 1020 599 L 1120 599"/>
+    </g>
+    <text x="1140" y="588" font-size="31" fill="#C9A552">revise and</text>
+    <text x="1140" y="626" font-size="31" fill="#C9A552">resubmit, back to 4</text>
+
+    <!-- flow arrows -->
+    <g stroke="#5E7DA8" stroke-width="5" fill="none" stroke-linecap="round">
+      <path d="M 548 179 L 574 179"/><path d="M 574 179 L 563 171"/><path d="M 574 179 L 563 187"/>
+      <path d="M 1028 179 L 1054 179"/><path d="M 1054 179 L 1043 171"/><path d="M 1054 179 L 1043 187"/>
+      <path d="M 548 319 L 574 319"/><path d="M 574 319 L 563 311"/><path d="M 574 319 L 563 327"/>
+      <path d="M 1028 319 L 1054 319"/><path d="M 1054 319 L 1043 311"/><path d="M 1054 319 L 1043 327"/>
+      <path d="M 548 459 L 574 459"/><path d="M 574 459 L 563 451"/><path d="M 574 459 L 563 467"/>
+      <path d="M 1028 459 L 1054 459"/><path d="M 1054 459 L 1043 451"/><path d="M 1054 459 L 1043 467"/>
+      <path d="M 548 599 L 574 599"/><path d="M 574 599 L 563 591"/><path d="M 574 599 L 563 607"/>
+    </g>
+
+    <text x="100" y="762" font-size="76" font-weight="800" letter-spacing="-2.4" fill="#FFFFFF">research-skills</text>
+    <text x="100" y="822" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="38" fill="#8FA8C6">github.com/Alexyskoutnev/research-skills</text>
   </g>
 </svg>
