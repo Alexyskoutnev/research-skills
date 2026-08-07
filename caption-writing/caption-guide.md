@@ -284,3 +284,45 @@ because they stack decoders — but a decoder stack is a list, and lists take
 periods or the "label: meaning" fragment, not semicolons. Budget about one or
 two per caption. After any editing pass, grep `;` — each survivor must name its
 antithesis or become a period.
+
+---
+
+## Part 8 — Figure-text exactness (the figure, its caption, and its table are one exhibit)
+
+A figure, its caption, and the table it corresponds to form ONE exhibit. Audit
+them together, never sentence by sentence in isolation. These rules were earned
+the hard way — caption patches kept failing until the exhibit was treated as a
+unit.
+
+1. **One vocabulary per exhibit.** Figure-internal labels (legends, bar names,
+   colorbars) use the caption's terms, and when the caption says "the values
+   correspond to Table N," the labels match Table N's row names word for word.
+   A mismatched vocabulary ("untaken actions" in the legend, "unobserved pairs"
+   in the caption) means regenerating the figure, not wording the caption
+   around it.
+2. **Legend entries are parallel.** Every entry fills the same slots. "at
+   evaluation time, items scored" (a time) beside "final model, items never
+   scored" (a thing) is a defect; "model during training, ..." / "final
+   model, ..." is the fix.
+3. **State the shared comparison once, up top.** When one comparison underlies
+   every mark ("every point compares the prediction with the ground truth"),
+   say it first; each mark type then carries only its differences (which
+   subset, which model stage), decoded with ONE shared verb phrase. Defining
+   each mark from scratch re-derives the machinery differently each time.
+4. **Anchor every inference to the datum that proves it.** Before attaching a
+   lesson clause ("high fit does not guarantee generalization"), check the
+   chart: the nearest-named example must be the one that proves the lesson,
+   never the counterexample where both quantities happen to agree.
+5. **Explain visible anomalies where the eye lands.** If the author pauses on a
+   mark pattern (a filled circle sitting right of its open circle), a
+   first-time reader stops dead. The caption explains the pattern in plain
+   terms at that exact spot ("the open circle averages the whole run, early
+   mistakes included; the filled circle tests only the final model").
+   Author-stumbles predict reader-stumbles, always.
+6. **Timing and coverage in plain words.** "One prediction before every action"
+   replaces modifier stacks like "precommitted evaluation-time predictions on
+   pairs observed during the run."
+7. **Check figure claims against the run data, not memory.** Per-item numbers
+   live in the experiment's result files; pull them before asserting or fixing
+   any figure-adjacent number. Never silently change a printed number —
+   verify against ground truth, then flag the change to the author.

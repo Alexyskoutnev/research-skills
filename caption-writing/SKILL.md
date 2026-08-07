@@ -68,9 +68,33 @@ This file is the operating summary.
   "can"/"could", no bare This/These, no em dashes; ration semicolons to a true
   antithesis.
 
+## Figure-text exactness (the exhibit is one unit)
+
+A figure, its caption, and the table it corresponds to are ONE exhibit; audit
+them together, not in isolation.
+
+- One vocabulary per exhibit: legend, bar, and colorbar labels use the caption's
+  terms; when the caption says values correspond to a table, the labels match
+  that table's row names word for word. Mismatches mean regenerating the figure,
+  not wording around it.
+- Legend entries parallel: every entry fills the same slots ("model during
+  training, items scored" / "final model, items never scored"), never a time
+  beside a thing.
+- State the one shared comparison first; each mark type then carries only its
+  differences, decoded with one shared verb phrase.
+- Anchor each inference to the datum that proves it: the nearest-named example
+  in a lesson sentence must not be the counterexample.
+- Explain visible anomalies where the eye lands (a filled circle right of its
+  open circle gets its plain-terms explanation inside the caption).
+- Check figure claims against the run data, not memory; never silently change a
+  printed number.
+- Full method and worked rules: Part 8 of `caption-guide.md`; the sentence-level
+  pass lives in the `sentence-audit` skill.
+
 ## Reference file
 
 - `caption-guide.md` — full guide: term translations, the name -> decode -> land
   recipe, the fill-in template, the checklist, the five judgment calls where the
-  dissected authors diverge, the semicolon addendum, the assembly order, and
-  worked examples (a figure, a table, and an algorithm caption) on a toy system.
+  dissected authors diverge, the semicolon addendum, the assembly order, worked
+  examples (a figure, a table, and an algorithm caption) on a toy system, and
+  the figure-text exactness rules (Part 8).

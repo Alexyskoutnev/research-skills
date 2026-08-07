@@ -62,11 +62,32 @@ This file is the operating summary.
 - Prose axioms: sentences <= ~28 words, subject and verb early, zero
   "can"/"could", no bare This/These, no em dashes, numbers glued to exact objects.
 
+## The insight layer (make it worth reading)
+
+Before writing findings, mine the run artifacts — logs, traces, per-example
+outputs — and record each candidate fact with its provenance (file, field,
+computation). Then:
+
+- Apply the quotability test: would a reviewer repeat this sentence to a
+  colleague? Facts that fail stay in the ledger, not the section.
+- Escalate rate -> guarantee -> exhibit: a rate ("92% of actions came from
+  validated plans") beats nothing; a guarantee ("every scored action passed the
+  check") beats a rate; a concrete exhibit (the one trace that shows it) beats
+  both. Report the strongest form the data supports.
+- Pick a story shape for the section's arc: mystery (a surprising number,
+  then its explanation), objection-kill (name the reviewer's doubt, then the
+  experiment that removes it), pivot (the expected story fails, the real one is
+  better), honest negative (what did not work, stated plainly), or artifact
+  inspection (read the system's own outputs closely).
+
+The rules above make a Results section correct; this layer makes it worth
+reading.
+
 ## Reference file
 
 - `results-guide.md` — full guide: term translations, the claims-discharged-by-
   numbers skeleton, three results recipes with fill-in templates, the devices
   recipe (purpose opener, claim-stating captions, the lesion ablation, the
   per-example drill-down, number discipline), mechanical checklists including the
-  "never in a results section" list, the assembly order, and a worked example on a
-  toy system.
+  "never in a results section" list, the assembly order, a worked example on a
+  toy system, and the insight layer (Part 6).

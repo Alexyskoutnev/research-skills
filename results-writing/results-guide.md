@@ -369,3 +369,37 @@ the "one map against one map" fairness that stands in for error-bar-free honesty
 tightly parallel pair; everything else takes a period. Budget about two per section.
 After any editing pass, grep `;` — each survivor must name its antithesis or become a
 period.
+
+---
+
+## Part 6 — The insight layer (correct is not the same as worth reading)
+
+The recipes above produce a correct Results section. This layer produces one a
+reviewer quotes. Run it before drafting the findings paragraphs.
+
+1. **Mine the artifacts with provenance.** Read the run logs, traces, and
+   per-example outputs — not just the aggregate table. Keep a facts ledger:
+   each candidate fact recorded with its source (file, field, computation), so
+   any number in the section traces back to an artifact in one hop.
+2. **Apply the quotability test.** For each candidate finding, ask: would a
+   reviewer repeat this sentence to a colleague? "The system scored 0.90" fails;
+   "the system solved the two mazes no baseline finished" passes. Facts that
+   fail the test stay in the ledger.
+3. **Escalate rate -> guarantee -> exhibit.** A rate is good ("92% of actions
+   came from validated plans"). A guarantee is better ("every scored action
+   passed the check — the harness enforces it"). An exhibit is best (the one
+   trace, printed or pointed to, where the reader watches it happen). For each
+   key claim, report the strongest of the three forms the data supports.
+4. **Pick a story shape** for the section's arc, then arrange the claim
+   subsections to serve it:
+   - **Mystery:** open on the surprising number, spend the section explaining it.
+   - **Objection-kill:** name the doubt a skeptical reviewer holds, then present
+     the experiment that removes it.
+   - **Pivot:** the expected story fails; the real story the data tells is
+     more interesting — say so.
+   - **Honest negative:** what did not work, stated plainly and early, with the
+     boundary it draws.
+   - **Artifact inspection:** read the system's own outputs closely and let the
+     specimens carry the argument.
+5. **Re-run the Part 4 checklists after the layer.** The insight layer adds
+   claims; every added claim still needs its paired number and its provenance.
