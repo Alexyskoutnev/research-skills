@@ -5,9 +5,8 @@ description: Write or revise a paper's Experimental Results section using recipe
 
 # Results section (master method)
 
-Follow `results-guide.md` in this folder — the complete plain-English method.
+Follow `results-guide.md` in this folder, the complete plain-English method.
 This file is the operating summary.
-
 ## Process
 
 1. **Figures and tables first, captions that state the conclusion.** Build the
@@ -16,7 +15,7 @@ This file is the operating summary.
    reading key and each baseline's handicap live in the caption or note, never in
    the prose.
 2. **Purpose opener, number-free.** Open by naming the questions the section
-   answers — no result in the opener. Each subsection then discharges exactly one
+   answers, no result in the opener. Each subsection then discharges exactly one
    of those questions.
 3. **Bank the setup: declare fairness, disclose compute.** Bank Setup / Systems as
    action-first paragraphs, not a Metrics subsection. Name every rival inline with
@@ -40,14 +39,13 @@ This file is the operating summary.
 8. **Limitations inside results, terse; then seal.** Keep a short Limitations
    subsection inside Results, each boundary routed to "remain open." Then seal the
    section: no method re-introduction, no new component, no literature survey.
-
 ## Core rules
 
-- Every number travels in pairs — before/after, ours/theirs, or fraction-and-
+- Every number travels in pairs, before/after, ours/theirs, or fraction-and-
   percent; a naked or unpaired hero number never appears.
 - Organize by a stable unit (benchmark / claim-question), never by a standalone
   Metrics / Baselines / Datasets subsection.
-- The star measurement — the one that carries the thesis — out-weighs the
+- The star measurement, the one that carries the thesis, out-weighs the
   aggregate scoreboard; anchor it with one per-example drill-down.
 - The ablation is a lesion mapped to named components; the verdict is stated as
   necessity ("X is necessary for Y").
@@ -58,16 +56,14 @@ This file is the operating summary.
 - Captions state the conclusion and decode every series; reading keys and baseline
   handicaps live in the caption or note, not the prose.
 - Seal the section: no method re-introduction, no new component, no literature
-  survey — those live in other sections.
+  survey, those live in other sections.
 - Prose axioms: sentences <= ~28 words, subject and verb early, zero
   "can"/"could", no bare This/These, no em dashes, numbers glued to exact objects.
-
 ## The insight layer (make it worth reading)
 
-Before writing findings, mine the run artifacts — logs, traces, per-example
-outputs — and record each candidate fact with its provenance (file, field,
+Before writing findings, mine the run artifacts, logs, traces, per-example
+outputs, and record each candidate fact with its provenance (file, field,
 computation). Then:
-
 - Apply the quotability test: would a reviewer repeat this sentence to a
   colleague? Facts that fail stay in the ledger, not the section.
 - Escalate rate -> guarantee -> exhibit: a rate ("92% of actions came from
@@ -79,13 +75,11 @@ computation). Then:
   experiment that removes it), pivot (the expected story fails, the real one is
   better), honest negative (what did not work, stated plainly), or artifact
   inspection (read the system's own outputs closely).
-
 The rules above make a Results section correct; this layer makes it worth
 reading.
-
 ## Reference file
 
-- `results-guide.md` — full guide: term translations, the claims-discharged-by-
+- `results-guide.md`: full guide: term translations, the claims-discharged-by-
   numbers skeleton, three results recipes with fill-in templates, the devices
   recipe (purpose opener, claim-stating captions, the lesion ablation, the
   per-example drill-down, number discipline), mechanical checklists including the

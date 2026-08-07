@@ -1,12 +1,11 @@
 # How to Write an Introduction and Related Work
 ### A plain-English guide. No linguistics jargon. Follow the steps.
-
 *Distilled from forensic dissections of fifteen papers by leading ML researchers, the
 classic writing guides, and the canonical ML papers. Sibling of `abstract-writing/`.*
 
 ---
 
-## Part 0 — The terms you need, in plain words
+## Part 0: The terms you need, in plain words
 
 | Fancy term | Plain meaning |
 |---|---|
@@ -14,24 +13,23 @@ classic writing guides, and the canonical ML papers. Sibling of `abstract-writin
 | **Funnel** | The intro's shape: wide (field) → narrow (your method) → forward (contributions). |
 | **The gap** | What is missing in the world, stated as a COST ("without X, systems waste Y"), not as "little work has studied...". |
 | **Artifact** | The thing you built, named once, at the pivot of the intro. |
-| **Citation as subject** | "SystemX introduced the idea that..." — the cited work is the doer. Use for rivals you engage. |
-| **Citation in parentheses** | "...is well studied [1,2,3]." — the citations are evidence, not actors. Use for background. |
+| **Citation as subject** | "SystemX introduced the idea that...", the cited work is the doer. Use for rivals you engage. |
+| **Citation in parentheses** | "...is well studied [1,2,3].", the citations are evidence, not actors. Use for background. |
 | **Credit-then-contrast** | The two-beat pattern for rivals: say warmly what they did, then state your one difference and its consequence. |
 | **Annotated bibliography** | The failure mode: a list of paper summaries with no relation to YOUR work. Reviewers hate it. |
 
 ---
 
-## Part 1 — The big secret: an intro is a funnel of seven answers
+## Part 1: The big secret: an intro is a funnel of seven answers
 
 A strong introduction answers seven reader questions, in order, roughly one paragraph
 each. The reader never has to hold an unanswered question for long.
-
-1. **Why should I care?** (the hook — a capability, a cost, or a puzzle)
+1. **Why should I care?** (the hook, a capability, a cost, or a puzzle)
 2. **What world are we in?** (one or two sentences of shared ground)
 3. **What is missing, and what does it cost?** (the gap, as named concrete costs)
 4. **What did you build?** (the artifact, named, with its one-sentence idea)
-5. **How does it work?** (ONE mechanism, concept only — constants and per-step details go in Method)
-6. **What did you find?** (contributions + your headline number — stated HERE, never saved for a surprise ending)
+5. **How does it work?** (ONE mechanism, concept only, constants and per-step details go in Method)
+6. **What did you find?** (contributions + your headline number, stated HERE, never saved for a surprise ending)
 7. **How does it differ from the nearest work?** (one clause; the full treatment is Related Work's job)
 
 Two rules that outrank all others:
@@ -39,31 +37,28 @@ Two rules that outrank all others:
   paragraph exists to earn a bullet.
 - **Never keep the result for a surprise.** Papers are not mystery novels; the reader
   decides whether to continue based on the intro, so the payoff goes in the intro.
-
 ---
 
-## Part 2 — The three intro recipes
+## Part 2: The three intro recipes
 
 ### Recipe A: The quiet build (short and confident)
 *Use when the idea itself is the star.*
 - Open on a human skill or a vivid, familiar capability ("Consider learning a new
   device with no manual...").
-- Silhouette the problem fully before naming the artifact — the reader should almost
+- Silhouette the problem fully before naming the artifact, the reader should almost
   invent your solution themselves, then meet it.
 - One mechanism paragraph, humble plain verbs, no chest-beating.
 - Contributions may be prose rather than bullets when there are two or three.
-
 **Template:** [Human skill or vivid scenario]. [Why machines lack it]. [The cost of
 lacking it]. We present [ARTIFACT], which [one-sentence idea]. [One mechanism
 paragraph]. [Findings + headline number]. [One-clause differentiation.]
 
 ### Recipe B: The answer-first opener (numbers as drama)
 *Use when your headline number is dramatic.*
-- State the result in the FIRST paragraph — the intro then explains how it was earned.
+- State the result in the FIRST paragraph, the intro then explains how it was earned.
 - Pre-empt the reader's biggest doubt (contamination, leakage, unfair baseline) within
   the intro, in one clause.
 - Order everything by importance, not chronology: the most important claim first.
-
 **Template:** [Strong systems] achieve [X], yet [fail at this]. We present [ARTIFACT],
 which raises [metric] from [low] to [high]. [How, in two paragraphs]. [Doubt killed in
 one clause]. [Contributions as bullets.]
@@ -72,29 +67,26 @@ one clause]. [Contributions as bullets.]
 *Use when your idea extends something the reader already knows.*
 - Open on a familiar object or method everyone uses.
 - Frame the gap as a paradox: "everyone relies on X, yet nobody has explained/solved Y."
-- Build patiently — each paragraph adds exactly one idea — and let the artifact appear
+- Build patiently, each paragraph adds exactly one idea, and let the artifact appear
   as the natural resolution.
 - Close on an idea the reader keeps, not only a number.
-
 **Template:** [Familiar thing] is the standard way to [task]. Yet [the paradox]. We
 extend [familiar thing] to [new setting]: [ARTIFACT]. [Mechanism]. [One sharp number].
 [The idea the reader keeps.]
 
 ---
 
-## Part 3 — The Related Work recipe
+## Part 3: The Related Work recipe
 
 **Placement and shape.** Group by THEME, not by paper. Order the groups far-to-near:
 distant background first, the closest rival group LAST, immediately before your
-differentiation — so the section ends by sharpening what is new about yours. Never open
+differentiation, so the section ends by sharpening what is new about yours. Never open
 the paper with a wall of citations before your own idea has been stated.
-
-**Citation grammar — two modes, used deliberately:**
+**Citation grammar, two modes, used deliberately:**
 - Background: parenthetical clusters. "Learned world models are well established
   [1, 2, 3]." The papers are evidence.
 - Engaged rivals: the system is the sentence subject. "SystemX introduced the
   constraint that..." The paper is an actor you answer.
-
 **The credit-then-contrast pattern** (one per rival, two beats):
 > "[Rival] introduced [their real idea, stated warmly]. We keep [the shared part] but
 > [your one difference], so [the consequence for the reader]."
@@ -111,14 +103,12 @@ Three invented worked examples of the shape:
 Note the manners: each rival's idea is stated as a genuine achievement; the contrast is
 one clause; a concurrent system is labeled concurrent and its metric adopted where
 possible. Your closest rival's authors are your likeliest reviewers.
-
 **The failure mode to avoid:** paragraph after paragraph of "Paper A did this. Paper B
 did that." with no sentence relating any of them to your work. Every related-work
 paragraph must end in a clause about YOUR method.
-
 ---
 
-## Part 4 — Mechanical checklists
+## Part 4: Mechanical checklists
 
 **Introduction:**
 - [ ] Contributions written first; every intro paragraph earns a bullet
@@ -147,48 +137,40 @@ paragraph must end in a clause about YOUR method.
 
 ---
 
-## Part 5 — The contributions list, drilled down
+## Part 5: The contributions list, drilled down
 
 The contributions list is the most-skimmed six lines of the paper: reviewers read the
 bold text, decide what you are claiming, and grade the paper against it.
-
 **The doctrine: write it first, and let it drive the paper.** Every section exists to
 substantiate a bullet; anything that substantiates no bullet is a cut candidate. Each
 bullet forward-references the section that proves it.
-
 **The refutability test (the one test that matters).** A contribution is a CLAIM
 someone could prove wrong, not a description of effort:
-
 | Fails the test | Passes |
 |---|---|
 | "We describe a system for X." | "An architecture that separates what prior systems fuse." |
 | "We explore the role of Y." | "The system infers the objective without supervision on N percent of cases (a of b)." |
 | "We evaluate extensively." | "An audited evaluation: [high] vs [low], with a [mid] ablation." |
 
-If a bullet cannot be wrong, it is not a contribution — rewrite until it can.
-
+If a bullet cannot be wrong, it is not a contribution, rewrite until it can.
 **The anatomy of one bullet:**
 1. Bold lead line = the claim itself, a noun phrase stating the DIFFERENCE or the
-   FINDING — never a topic ("An architecture for X" is a topic; "An architecture that
+   FINDING, never a topic ("An architecture for X" is a topic; "An architecture that
    [does what rivals do not]" is a claim).
 2. Two or three support sentences with a "We [verb]" spine.
 3. Numbers attached to their exact objects, in pairs.
 4. Optional forward reference to the proving section.
-
 **One bullet per TYPE, mapped one-to-one onto the gap.** Mix contribution types instead
 of listing three features: the **idea** (artifact / named concept), the **science** (a
 measurement or finding the community keeps even if they ignore your system), the
 **evidence** (the evaluation, with its integrity story). And the bullets answer the
 intro's named costs in the same order, so the reader sees each fix slot into its hole.
-
 **Bullets or prose?** The dissected authors split: one always writes contributions as
 prose (First / Second / Finally), one enumerates freely, one uses either. The
 tiebreaker: match the format your likeliest expert reviewer's own papers use.
-
 **Claiming firsts.** Narrow and factual ("the first audited evaluation of X on the
-full public benchmark"), never a boast — and only after checking the claim against
+full public benchmark"), never a boast, and only after checking the claim against
 every rival you cite.
-
 **The contributions checklist:**
 - [ ] Written BEFORE the intro prose; every intro paragraph earns a bullet
 - [ ] Each bold line states a refutable claim, not a topic
@@ -201,9 +183,9 @@ every rival you cite.
 
 ---
 
-## Part 6 — The assembly line
+## Part 6: The assembly line
 
-1. **Write the contribution bullets** (refutable claims, bold first lines — Part 5).
+1. **Write the contribution bullets** (refutable claims, bold first lines. Part 5).
 2. **Pick a recipe** (A quiet build / B answer-first / C familiar anchor) by what your
    paper's star is: the idea, the number, or the extension.
 3. **Draft the seven funnel paragraphs**, one per question, ugly first pass.
@@ -213,10 +195,9 @@ every rival you cite.
 6. **Read intro + related work cold, in one pass.** A stranger should finish knowing
    your problem, your idea, your evidence, and exactly how you differ from the nearest
    system.
-
 ---
 
 **Semicolon rule (addendum).** A semicolon is earned only by a true antithesis or
 tightly parallel pair; everything else takes a period. Budget about two per section.
-After any editing pass, grep `;` — each survivor must name its antithesis or become a
+After any editing pass, grep `;`: each survivor must name its antithesis or become a
 period.

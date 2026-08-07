@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/hero.svg" alt="research-skills — turn a working draft into a paper reviewers accept" width="100%">
+<img src="assets/hero.svg" alt="research-skills, turn a working draft into a paper reviewers accept" width="100%">
 
 <br/>
 
@@ -10,9 +10,8 @@
 [![License](https://img.shields.io/badge/license-MIT-6E8BB8?style=flat-square)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/Alexyskoutnev/research-skills?style=flat-square&color=E8B33E)](https://github.com/Alexyskoutnev/research-skills/stargazers)
 
-**Nine Claude Code skills for writing an ML paper — abstract to rebuttal.**
+**Nine Claude Code skills for writing an ML paper, abstract to rebuttal.**
 Not prompts. Recipes, axioms, and mechanical checklists, reverse-engineered from papers that got in.
-
 </div>
 
 ---
@@ -20,7 +19,6 @@ Not prompts. Recipes, axioms, and mechanical checklists, reverse-engineered from
 > Most writing advice tells you to *be clear*. That is not actionable at 2 a.m. three days before the deadline.
 > These skills tell you: contribution in sentence one, strongest verb available, every number paired with
 > its comparison, zero instances of "can", no bare "This". Rules a machine can check, because a machine checks them.
-
 ## Contents
 
 - [What this is](#-what-this-is)
@@ -39,47 +37,42 @@ Not prompts. Recipes, axioms, and mechanical checklists, reverse-engineered from
 A paper section fails for boring, findable reasons. The abstract buries the contribution in sentence four.
 A number appears with nothing to compare it against. A caption says "Results on the benchmark" instead of
 stating what the figure proves. Every reviewer notices. Nobody tells you which one it was.
-
 Each skill in this repo is one section of a paper, decomposed into:
-
-- **a recipe** — the shape that section takes, with the fill-in-the-blank template
-- **axioms** — the judgment calls, and how strong authors resolve them
-- **a mechanical checklist** — the pass a machine runs before you ship
+- **a recipe**: the shape that section takes, with the fill-in-the-blank template
+- **axioms**: the judgment calls, and how strong authors resolve them
+- **a mechanical checklist**: the pass a machine runs before you ship
 
 Point Claude Code at a draft, invoke the skill, and it applies the same pass every time. No taste required
 at 2 a.m. The taste is already in the file.
-
 ## 🚀 Quick start
 
 ```bash
 # 1. Clone
 git clone https://github.com/Alexyskoutnev/research-skills.git
 
-# 2. Install — copy the skills you want into your skills directory
+# 2. Install: copy the skills you want into your skills directory
 mkdir -p ~/.claude/skills
 cp -r research-skills/abstract-writing ~/.claude/skills/
 cp -r research-skills/sentence-audit  ~/.claude/skills/
 
-# ...or take all nine, personally:
+# or take all nine, personally:
 cp -r research-skills/*-writing research-skills/sentence-audit ~/.claude/skills/
 
-# ...or scope them to one project instead:
+# or scope them to one project instead:
 cp -r research-skills/*-writing <your-project>/.claude/skills/
 ```
 
 Then in Claude Code:
-
 ```
 > /abstract-writing            revise my abstract for submission
 > /results-writing             the results section reads like a list, fix the claims
 > /caption-writing             Figure 3's caption states nothing, make it land
 > /sentence-audit              precision pass on the paragraph I just rewrote
-> /rebuttal-writing            reviews are in — triage them before I draft anything
+> /rebuttal-writing            reviews are in, triage them before I draft anything
 ```
 
 Skills also load automatically when a request matches their description, so `"tighten this abstract"`
 pulls in `abstract-writing` without you naming it.
-
 <details>
 <summary><b>Using another agent (Codex CLI, Cursor, or your own)</b></summary>
 
@@ -87,14 +80,12 @@ pulls in `abstract-writing` without you naming it.
 
 Every skill is a single `SKILL.md` in plain Markdown with YAML frontmatter. Nothing in it is
 Claude-specific. Point any agent at the file and tell it to follow the file:
-
 ```
 Read ~/research-skills/method-writing/SKILL.md and apply it to section 3 of paper.tex.
 ```
 
 The reference guides beside each `SKILL.md` (`method-guide.md`, etc.) hold the long-form method
 if the agent wants more than the operating summary.
-
 </details>
 
 ## 📚 The skills
@@ -122,17 +113,15 @@ method-writing/
 └── method-guide.md   # the full plain-English method: recipes, templates, checklists
 ```
 
-`SKILL.md` is what the agent loads first — short, procedural, ~40 lines. The guide beside it is
+`SKILL.md` is what the agent loads first: short, procedural, ~40 lines. The guide beside it is
 the long form: worked recipes, fill-in templates, the "never do this in a method section" lists,
 and the reasoning behind each rule so you can overrule it deliberately.
-
 </details>
 
 ## 🔗 How they chain
 
 Use one, or run the lifecycle end to end. Each skill assumes the previous section exists but
 never requires it.
-
 ```mermaid
 flowchart LR
     A["abstract<br/>writing"] --> B["intro +<br/>related"]
@@ -159,12 +148,10 @@ flowchart LR
 
 The one ordering that matters: **write the contribution bullets before the introduction**, and
 **write the abstract last or twice**. Everything else composes in any order.
-
 ## ✨ What "good" looks like
 
-Every rule below is mechanical — the skill checks it, no taste needed. Examples use a toy system
+Every rule below is mechanical. The skill checks it, no taste needed. Examples use a toy system
 so the rule is what you notice.
-
 <table>
 <tr><th width="50%">❌ Before</th><th width="50%">✅ After</th></tr>
 
@@ -177,7 +164,7 @@ so the rule is what you notice.
 *"We present ROUTER, a scheduler that cuts tail latency from 120 ms to 40 ms under peak load."*
 
 </td></tr>
-<tr><td colspan="2"><sub><b>abstract-writing</b> — contribution in sentence one, strong verb, no "can", numbers travel in pairs.</sub></td></tr>
+<tr><td colspan="2"><sub><b>abstract-writing</b>: contribution in sentence one, strong verb, no "can", numbers travel in pairs.</sub></td></tr>
 
 <tr><td>
 
@@ -188,7 +175,7 @@ so the rule is what you notice.
 *"This gap shows the model generalizes."*
 
 </td></tr>
-<tr><td colspan="2"><sub><b>sentence-audit</b> — never a bare This/These. The reader should not have to guess the antecedent.</sub></td></tr>
+<tr><td colspan="2"><sub><b>sentence-audit</b>: never a bare This/These. The reader should not have to guess the antecedent.</sub></td></tr>
 
 <tr><td>
 
@@ -199,7 +186,7 @@ so the rule is what you notice.
 *"Figure 3: Latency under load. Each dot is one run, both axes logarithmic. ROUTER stays under 40 ms at every load where the baseline exceeds 120 ms."*
 
 </td></tr>
-<tr><td colspan="2"><sub><b>caption-writing</b> — name it, decode it, land the claim. A skimmer reads captions and nothing else.</sub></td></tr>
+<tr><td colspan="2"><sub><b>caption-writing</b>: name it, decode it, land the claim. A skimmer reads captions and nothing else.</sub></td></tr>
 
 <tr><td>
 
@@ -210,7 +197,7 @@ so the rule is what you notice.
 *"**Removing the scheduler costs more than removing the cache.** Deleting the scheduler drops throughput 31%, against 4% for the cache..."*
 
 </td></tr>
-<tr><td colspan="2"><sub><b>results-writing</b> — every findings paragraph opens with the claim it discharges, in bold, and the numbers land in the first two sentences.</sub></td></tr>
+<tr><td colspan="2"><sub><b>results-writing</b>: every findings paragraph opens with the claim it discharges, in bold, and the numbers land in the first two sentences.</sub></td></tr>
 
 <tr><td>
 
@@ -221,64 +208,53 @@ so the rule is what you notice.
 *"FASTQUEUE introduced learned admission control [12], and we keep its admission model unchanged. The difference is where the decision lands: FASTQUEUE ranks requests already queued, whereas ROUTER decides before the queue exists, so a mispredicted request costs nothing to evict."*
 
 </td></tr>
-<tr><td colspan="2"><sub><b>intro-related-writing</b> — credit warmly, contrast once, state the consequence. Your closest rival is your likeliest reviewer.</sub></td></tr>
+<tr><td colspan="2"><sub><b>intro-related-writing</b>: credit warmly, contrast once, state the consequence. Your closest rival is your likeliest reviewer.</sub></td></tr>
 
 </table>
 
 ## 🔬 Where the rules come from
 
 These are not invented style preferences. Each skill was built in two passes:
-
-**1. Forensic dissection.** Accepted papers from leading ML groups, read line by line — not for
+**1. Forensic dissection.** Accepted papers from leading ML groups, read line by line, not for
 content but for construction. Where does the contribution sentence sit? How many words before the
 first number? What does the last sentence of the conclusion do? Patterns that held across authors
 became rules. Patterns where strong authors *disagreed* became documented judgment calls, with
 both options and the trade-off.
-
-**2. A real submission cycle.** Every skill was then used to build an actual paper — drafted,
+**2. A real submission cycle.** Every skill was then used to build an actual paper, drafted,
 torn apart in faculty review, rewritten, torn apart again. Rules that survived contact with real
 reviewers stayed. Rules that produced stilted prose were cut. The checklists are the residue of
 what actually got flagged.
-
 That is why the rules are oddly specific. "Numbers travel in pairs" is in there because a lone
 number drew a comment. "No bare This" is in there because an advisor circled one.
-
 ## 🪶 Why it's plain Markdown
 
 No framework. No dependencies. No database, daemon, or config to maintain. Nine folders, each with a
 `SKILL.md` any LLM can read.
-
-Fork it and overrule the parts you disagree with — the guides explain the reasoning behind each rule
+Fork it and overrule the parts you disagree with. The guides explain the reasoning behind each rule
 precisely so you can. A house style you cannot argue with is not a house style, it is a cage.
-
 ## 📐 Conventions
 
 - One skill per folder. `SKILL.md` carries the frontmatter (`name` matching the folder, `description`
   stating what it does *and when to use it*) plus a short operating summary.
-- Long-form material lives in reference `.md` files beside `SKILL.md`, never inside it — the operating
+- Long-form material lives in reference `.md` files beside `SKILL.md`, never inside it. The operating
   summary should fit in a glance.
 - Skills stay transferable: no project data, no private paths, no numbers from unpublished work.
   Examples use toy systems.
 - Improve a skill inside a project, then port the improvement back here.
-
 ## 🤝 Contributing
 
-PRs welcome, especially for sections not covered yet — a *limitations* skill, a *cover-letter* skill,
+PRs welcome, especially for sections not covered yet: a *limitations* skill, a *cover-letter* skill,
 a domain-specific variant for theory or systems papers.
-
 Add `your-skill/SKILL.md` with valid frontmatter, keep the examples generic, and open a PR.
 If your skill encodes a rule, say where the rule came from.
-
 ## 📄 License
 
 MIT. See [LICENSE](LICENSE).
-
 `rebuttal-writing` takes its structural outline (staged triage, severity classes, output modes) from
 [TobiasLee/Rebuttal-Skill](https://github.com/TobiasLee/Rebuttal-Skill); that repo carries no license,
 so the skill is written entirely in original wording.
-
 ---
 
 <div align="center">
-<sub>Built with <a href="https://claude.com/claude-code">Claude Code</a>. If a rule here saves you a round of reviews, ⭐ it.</sub>
+<sub>If a rule here saves you a round of reviews, star it.</sub>
 </div>

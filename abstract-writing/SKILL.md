@@ -5,9 +5,8 @@ description: Write or revise a research-paper abstract using three master recipe
 
 # Abstract Writing (three master recipes)
 
-Follow `abstract-guide.md` in this folder — it is the complete plain-English method.
+Follow `abstract-guide.md` in this folder, it is the complete plain-English method.
 This file is the operating summary.
-
 ## Process
 
 1. **Six answers first.** Before any prose, write six rough bullets: what did you build /
@@ -25,14 +24,13 @@ This file is the operating summary.
    - Zero occurrences of "can", "cannot", "could".
    - Every "This/These" is followed by a noun ("This gate shows...", never "This shows...").
    - Every number has a partner (from X to Y; ours vs. theirs; with vs. without).
-   - Each number is attached to the correct claim — never borrow a similar-looking
+   - Each number is attached to the correct claim, never borrow a similar-looking
      statistic from a different measurement.
    - Last sentence is an idea, not a number. 140-190 words. No contractions.
 4. **Read it aloud**; fix every stumble. Compare against the closest rival paper's
    abstract and make the differentiation audible in one clause.
-
 ## Reference file
 
-- `abstract-guide.md` — the full plain-English guide (recipes, templates, sentence
+- `abstract-guide.md`: the full plain-English guide (recipes, templates, sentence
   surgery, the assembled fill-in-the-blank template, and twelve further rules from the
   classic writing guides and canonical ML abstracts).

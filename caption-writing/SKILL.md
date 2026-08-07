@@ -5,17 +5,16 @@ description: Write or revise figure, table, and algorithm captions using recipes
 
 # Captions (master method)
 
-Follow `caption-guide.md` in this folder — the complete plain-English method.
+Follow `caption-guide.md` in this folder, the complete plain-English method.
 This file is the operating summary.
-
 ## Process
 
 1. **Name the exhibit.** Open with a verbless noun phrase that names what the
-   reader is looking at, then a period — never "This figure shows." The opener
+   reader is looking at, then a period, never "This figure shows." The opener
    is a bare label of the object; the expansion follows it. The claim, when
    present, is the closer, not the opener.
-2. **Decode the reading keys.** Key every mark on the canvas exactly once —
-   every color, panel, line, bar direction, axis, symbol, and bold cell — as a
+2. **Decode the reading keys.** Key every mark on the canvas exactly once,
+   every color, panel, line, bar direction, axis, symbol, and bold cell, as a
    short "label: meaning" fragment. Expand every abbreviation on first caption
    use, and state the scale direction of any ordinal axis that could be misread
    ("lower is better", "brighter is higher").
@@ -25,7 +24,7 @@ This file is the operating summary.
    tells no story, and the full results row stays in the cells.
 4. **Close on caveats.** Fold provenance in as a terse pointer, never a sentence
    of its own beyond the cross-reference. Carry the setup constants and local
-   caveats that live nowhere else — the reproduce-me numbers, the as-is
+   caveats that live nowhere else, the reproduce-me numbers, the as-is
    unfinished counts, what the bold cells mark.
 5. **Self-containment beats deduplication.** A caption is read by a skimmer who
    may never touch the running text, so restate the body freely; the repeat is
@@ -35,24 +34,23 @@ This file is the operating summary.
    writing: the flagship (headline table or chart) states the verdict outright
    as its closer; the workhorse (per-item table, diagram) only describes and
    takes no verdict. Let caption length track this role, not the Figure/Table
-   label — the method-carrying figure earns the fullest caption; a scoreboard
+   label, the method-carrying figure earns the fullest caption; a scoreboard
    earns a three-sentence label.
 7. **Check claim direction against the data.** Before shipping, verify the
-   takeaway's direction matches the scale you decoded — if "lower is better,"
+   takeaway's direction matches the scale you decoded, if "lower is better,"
    the winner must hold the lower number. Confirm each number is still glued to
    the object it measures and that no two distinct rates were rounded into one.
-
 ## Core rules
 
 - Open with a verbless noun phrase naming the object; never "This figure shows."
   Order every caption name -> decode -> claim; the verdict is the closer.
 - Rank the exhibit first: flagship captions claim (verdict last), workhorse
   captions only describe.
-- Decode every mark exactly once — no color, line, bar, panel, symbol, or bold
+- Decode every mark exactly once, no color, line, bar, panel, symbol, or bold
   cell left undefined; expand every abbreviation on first caption use; state the
   scale direction of any ordinal axis that could be misread.
 - Self-containment beats deduplication: a caption may restate a body conclusion,
-  and the flagship captions should — a reader who sees only the exhibit must get
+  and the flagship captions should, a reader who sees only the exhibit must get
   the finding.
 - Spend the caption's unique real estate on the reading key and the setup
   constants that appear nowhere else.
@@ -67,12 +65,10 @@ This file is the operating summary.
 - Prose axioms: sentences <= ~28 words, subject and verb early, zero
   "can"/"could", no bare This/These, no em dashes; ration semicolons to a true
   antithesis.
-
 ## Figure-text exactness (the exhibit is one unit)
 
 A figure, its caption, and the table it corresponds to are ONE exhibit; audit
 them together, not in isolation.
-
 - One vocabulary per exhibit: legend, bar, and colorbar labels use the caption's
   terms; when the caption says values correspond to a table, the labels match
   that table's row names word for word. Mismatches mean regenerating the figure,
@@ -90,10 +86,9 @@ them together, not in isolation.
   printed number.
 - Full method and worked rules: Part 8 of `caption-guide.md`; the sentence-level
   pass lives in the `sentence-audit` skill.
-
 ## Reference file
 
-- `caption-guide.md` — full guide: term translations, the name -> decode -> land
+- `caption-guide.md`: full guide: term translations, the name -> decode -> land
   recipe, the fill-in template, the checklist, the five judgment calls where the
   dissected authors diverge, the semicolon addendum, the assembly order, worked
   examples (a figure, a table, and an algorithm caption) on a toy system, and

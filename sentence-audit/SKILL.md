@@ -1,6 +1,6 @@
 ---
 name: sentence-audit
-description: Sentence-by-sentence precision pass for paper prose — divide a paragraph into sentences, test each against the first-time-reader defect list, rewrite minimally, condense aggressively; plus the LaTeX editing invariants (wrapping, per-paragraph commits, layout checks) that keep an edit pass safe. Use when polishing a section or caption for submission, when a paragraph reads wrong but the fault is unclear, or when auditing a figure-caption-table exhibit as a unit.
+description: Sentence-by-sentence precision pass for paper prose, divide a paragraph into sentences, test each against the first-time-reader defect list, rewrite minimally, condense aggressively; plus the LaTeX editing invariants (wrapping, per-paragraph commits, layout checks) that keep an edit pass safe. Use when polishing a section or caption for submission, when a paragraph reads wrong but the fault is unclear, or when auditing a figure-caption-table exhibit as a unit.
 ---
 
 # Sentence audit (precision pass)
@@ -8,7 +8,6 @@ description: Sentence-by-sentence precision pass for paper prose — divide a pa
 The refinement mode for near-final paper prose: take one paragraph (or
 caption) at a time, divide it into sentences, test each against the defect
 list, rewrite minimally, condense aggressively, verify, commit.
-
 ## The defect list (test every sentence against all of these)
 
 1. **Wrong ontology.** The subject does something its type does not do:
@@ -51,24 +50,21 @@ list, rewrite minimally, condense aggressively, verify, commit.
     zero can/cannot/could, no bare This/These, no em dashes, numbers glued
     to their objects and traveling in pairs, semicolons rationed to a true
     antithesis.
-
 ## The rewrite recipe
 
 - Lead with purpose or claim; procedure follows.
 - One subject doing one thing per clause.
 - Reuse established terms verbatim; never coin a synonym for an existing
-  term ("unseen" beside "unobserved" is a split — unify).
+  term ("unseen" beside "unobserved" is a split, unify).
 - Condense without fear: if the caption now carries a definition, the body
   sentence that repeated it dies. Target 20-30% shorter per pass.
 - Captions are self-contained (a caption-only reader decodes every term,
   column, exclusion, and mark) and follow name -> decode -> land (the
   caption-writing skill).
-
 ## Figure-text exactness
 
 A figure, its caption, and the table it corresponds to are ONE exhibit; audit
 them together, not sentence by sentence in isolation.
-
 1. **One vocabulary per exhibit.** Figure-internal labels (legends, bar
    names, colorbars) use the caption's terms, and when the caption says "the
    values correspond to Table N," the labels match Table N's row names word
@@ -81,7 +77,7 @@ them together, not sentence by sentence in isolation.
 3. **State the shared comparison once, up top.** When one comparison
    underlies every mark, say it first; each mark type then carries only its
    differences, decoded with ONE shared verb phrase. Defining each mark from
-   scratch re-derives the machinery differently each time — that is why
+   scratch re-derives the machinery differently each time, that is why
    caption patches keep failing until the exhibit is restructured.
 4. **Anchor every inference to the datum that proves it.** Before attaching
    a lesson clause ("exact replay does not guarantee generalization"), check
@@ -97,7 +93,6 @@ them together, not sentence by sentence in isolation.
 7. **Check figure claims against the run data, not memory.** Per-item
    numbers live in the experiment's result files; pull them before asserting
    or fixing any figure-adjacent number.
-
 ## Verification questions that beat arguing
 
 When the author (or a reviewer) disputes a factual direction, check the
@@ -105,7 +100,6 @@ artifact, not the prose: the experiment's README, the scripts that produced
 the numbers, the table column sums. A claimed measurement direction is
 settled by asking which results would be impossible if the other reading
 were true.
-
 ## Editing invariants (hard rules for the pass)
 
 1. **Hold until approved.** Present the audit + rewrite; apply only on the
@@ -141,7 +135,6 @@ were true.
 10. **Layout gates.** Sections and appendices start at the top of their page
     or column; white space is minimized; zero formatting errors on the
     rendered page.
-
 ## Worked before/after specimens
 
 - "the state occurred during the run, but the action was never applied from
