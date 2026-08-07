@@ -14,22 +14,22 @@ This file is the operating summary.
    A figure with no nameable claim is decoration; delete it or turn it into a
    sentence. One figure, one job; a second claim earns a second panel.
 2. **Pick the form from the question.** Comparison takes bars or dots sorted by
-   value, distribution takes a histogram or ECDF, relationship takes a scatter
-   or a line over ordered x, composition takes a stacked bar with a meaningful
-   total, flow and architecture take a diagram. Under about twenty numbers that
-   readers will quote, a table wins.
+   value. Distribution takes a histogram or ECDF. Relationship takes a scatter,
+   or a line when x is ordered. Composition takes a stacked bar with a
+   meaningful total. Flow and architecture take a diagram. Under about twenty
+   numbers that readers will quote, a table wins.
 3. **Size the canvas to the column before drawing.** NeurIPS and ICLR give a
    5.5 in wide text block; ICML gives two 3.25 in columns inside a 6.75 in
    block. Build at that exact width so `\includegraphics` scales by 1.0. Every
    rescale multiplies the type size by the same factor.
 4. **Diagram track, author in Figma.** One frame per figure, width in pixels set
-   to inches times 72 (396 px, 234 px, 486 px). Snap everything to an 8 px grid,
-   make repeated blocks components, use auto layout for padding, bind color and
-   text styles so the figure family stays consistent, name every layer. Export
-   PDF at 1x.
+   to inches times 72 (5.5 in is 396 px, 3.25 in is 234 px). Snap to an 8 px
+   grid, make repeated blocks components, use auto layout for padding, and bind
+   color and text styles so the figure family stays consistent. Name every
+   layer, and export PDF at 1x.
 5. **Plot track, author in matplotlib.** Set `figure.figsize` to the column
-   width in inches, set `pdf.fonttype` to 42 (the default 3 is rejected by some
-   venues), match the paper's serif family, keep line widths at or above 0.5 pt,
+   width in inches and `pdf.fonttype` to 42 (the default 3 is rejected by some
+   venues). Match the paper's serif family, keep line widths at or above 0.5 pt,
    drop the top and right spines, and save to PDF.
 6. **Set type at final printed size.** Figure text is never smaller than the
    caption text, which is 9 pt at ICML. Labels carry data only: axis quantity,
@@ -39,7 +39,7 @@ This file is the operating summary.
    the Okabe-Ito set, so the reading survives grayscale printing and color
    vision deficiency. Convert the figure to gray and read it before shipping.
 8. **Export vector, then verify the file.** `pdfinfo` must report the page size
-   you designed (3.25 in reads as 234 pts), `pdffonts` must show every font
+   you designed (3.25 in reads as 234 pts). `pdffonts` must show every font
    embedded and no Type 3. Raster only for photographs and pixel grids, at 300
    dpi or better.
 9. **Place it and hand off the caption.** Include at `\columnwidth` or
@@ -66,8 +66,8 @@ This file is the operating summary.
 - Vector for anything drawn (PDF), raster only for photographs and pixel grids.
 - Do not trust plotting defaults: matplotlib ships a 6.4 by 4.8 in canvas and
   Type 3 fonts, both wrong for a paper.
-- Every axis states its quantity and unit; every mark on the canvas is decoded
-  in the legend or the caption; nothing appears twice.
+- Every axis states its quantity and unit. Every mark on the canvas is decoded
+  in the legend or the caption, exactly once, never in both.
 - Truncated axes, pie charts, and 3D effects on 2D data mislead. Show the full
   range or state the truncation in the caption.
 - Prose axioms for all figure and caption text: sentences <= ~28 words, zero

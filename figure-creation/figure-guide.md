@@ -56,10 +56,10 @@ that discharges it.
 - **Rank the figure before drawing.** A flagship figure carries the paper's
   headline result and earns width, panels, and a long caption. A workhorse figure
   documents a mechanism and earns a compact canvas.
-- *Toy:* TileSort's claim is "rejecting low-confidence tiles raises bin purity at
-  a small throughput cost." One claim, two quantities, one figure.
 - **Rule 9, message trumps beauty**: readability of the message is the point, and
   beauty is optional (same source as above).
+- *Toy:* TileSort's claim is "rejecting low-confidence tiles raises bin purity at
+  a small throughput cost." One claim, two quantities, one figure.
 ---
 
 ## Part 2: Pick the form
@@ -105,7 +105,7 @@ axes that distort perception, and asks for full value ranges and labels
 - **Keep a faint horizontal grid only when readers must compare values across a
   wide gap.** Set it behind the data at low weight.
 - **Prefer small multiples to a five-series spaghetti plot.** Five lines in one
-  axes is five chances to misread; five small panels is one shared reading.
+  panel is five chances to misread; five small panels is one shared reading.
 - **Rule 8, avoid chartjunk**, and **Rule 5, do not trust the defaults**: default
   settings "are good enough for any plot but they are best for none" (Rougier et
   al., URL above).
@@ -115,7 +115,7 @@ axes that distort perception, and asks for full value ranges and labels
 
 Architecture and pipeline figures are drawn, not plotted. A vector design tool
 beats TikZ for iteration speed and beats slides for precision. The discipline
-below is what keeps a hand-drawn diagram looking machine-made.
+below is what stops a hand-placed diagram from looking hand-placed.
 
 ### 3.1 Size the frame to the column, first
 
@@ -168,9 +168,9 @@ about a third of the 9 in text height so it never eats a page alone.
   (https://help.figma.com/hc/en-us/articles/14548865734679). Set the frame to a
   fixed width so auto layout grows the height only.
 - **Bind color styles and text styles, never raw hex or raw font sizes.** Define
-  `fig/blue`, `fig/orange`, `fig/gray-200`, `fig/label`, `fig/annotation` once, in
-  a shared library, and every figure in the paper inherits them. A palette change
-  then costs one edit rather than eleven files.
+  `fig/blue`, `fig/orange`, `fig/gray-200`, `fig/label`, `fig/annotation` once,
+  in a shared library, and every figure in the paper inherits them. A palette
+  change then costs one edit rather than eleven files.
 - **Name every layer for what it is.** `scanner-box`, `arrow-scanner-to-sorter`,
   `label-reject-rate`. Layer names become SVG `id` attributes when the export
   option "Include 'id' attribute" is on
@@ -190,7 +190,8 @@ that reads as assembled.
 - **One corner radius everywhere.** Pick 4 px or 6 px for boxes and never vary
   it. Radius variation implies a semantic difference that does not exist.
 - **One stroke weight per role.** For example: 1 px for box outlines, 1.5 px for
-  data-flow arrows, 0.5 px for annotation leaders. Three roles maximum.
+  data-flow arrows, 0.75 px for annotation leaders. Three roles maximum, and
+  nothing below 0.75 px so every line clears the 0.5 pt reproduction floor.
 - **Align edges, then align optically.** Snap boxes to shared x or y edges with
   Figma's align tools, then correct by eye. A shape's visual center often differs
   from its bounding box, which happens with triangles, arrowheads, and
@@ -248,8 +249,8 @@ reproducible from the results file.
 - matplotlib ships `figure.figsize: 6.4, 4.8` inches
   (https://raw.githubusercontent.com/matplotlib/matplotlib/main/lib/matplotlib/mpl-data/matplotlibrc).
   Include that 6.4 in canvas in a 3.25 in ICML column and LaTeX scales it by
-  3.25 / 6.4 = 0.51, so 10 pt tick labels print at about 5 pt. Illegible, and the
-  single most common figure defect in submitted papers.
+  3.25 / 6.4 = 0.51, so 10 pt tick labels print at about 5 pt. Illegible, and a
+  routine reason reviewers flag a figure.
 - matplotlib ships `pdf.fonttype: 3` and `ps.fonttype: 3`, both documented as
   "Output Type 3 (Type3) or Type 42 (TrueType)" (same file). arXiv asks that
   "outline (TrueType/Type1) rather than bitmap (Type3) fonts are used"
@@ -275,9 +276,9 @@ mpl.rcParams.update({
     "figure.figsize":   (COLUMN_IN, COLUMN_IN * 0.62),
     "figure.dpi":       200,        # screen preview only
     "savefig.dpi":      400,        # matters only for embedded raster
-    "savefig.bbox":     "tight",
-    "savefig.pad_inches": 0.01,
+    "savefig.bbox":     "standard", # keep the page exactly figsize
     "savefig.format":   "pdf",
+    "figure.constrained_layout.use": True,   # fit labels without cropping
 
     # Fonts: embed TrueType, match the paper's serif family.
     "pdf.fonttype":     42,         # default is 3
@@ -317,21 +318,24 @@ Notes on the choices:
   in inches and let the height follow from the content. A ratio near 0.62 (the
   golden ratio) suits a single-panel line plot; a bar chart with long category
   names goes taller.
-- **`savefig.bbox: "tight"` trims the surrounding whitespace**, which shrinks the
-  saved page slightly below `figsize`. Include with `width=\columnwidth` and the
-  residual scale stays within a percent or two. Verify with `pdfinfo`.
+- **Keep `savefig.bbox` at `"standard"` and let constrained layout do the
+  fitting.** `bbox="tight"` crops the saved page to the drawn content, so the
+  file comes out narrower than `figsize` and `width=\columnwidth` then scales it
+  back up by a percent or two. Constrained layout instead shrinks the axes to fit
+  the labels inside the declared size, so the exported width stays exact.
 - **If 9 pt labels collide, the figure holds too much.** Drop a series, shorten
   the tick labels, or promote to a spanning figure. Never shrink the type.
 - **`text.usetex: True` or the PGF backend** makes the figure's math and text
-  identical to the paper's, at the cost of a TeX run per figure. Use it when
-  math appears inside the figure; otherwise the serif family above is close
-  enough, and it builds faster.
+  identical to the paper's, at the cost of a TeX run per figure. Turn it on when
+  math appears inside the figure. Otherwise leave it off: the serif family above
+  is close enough, and the build stays fast.
 
 ### 4.3 Plot hygiene
 
 - **Label both axes with the quantity and the unit**: "Belt speed (tiles/s)",
-  not "speed". A bare axis name is the second most common reviewer complaint
-  after illegible type.
+  not "speed". ICML asks authors to "give a name for each axis and include a
+  legend" (https://arxiv.org/html/2502.04757v1), and a unitless axis leaves the
+  reader guessing at the scale.
 - **Show uncertainty.** Multiple seeds get a band or error bars, and the caption
   states what the band is. A single-seed curve claims a precision it lacks.
 - **Start bar axes at zero.** Truncated bar axes exaggerate differences, which
@@ -378,8 +382,9 @@ Notes on the choices:
   crowded with qualifiers reads as a slide, not a figure.
 - **Expand or drop abbreviations.** If an axis label needs an abbreviation to
   fit, the abbreviation is decoded in the caption on first use.
-- **Sentence case for labels, no terminal periods.** "Bin purity (%)", not "Bin
-  Purity (%)." and not "bin purity (%)."
+- **Sentence case for labels, and no terminal period.** Write `Bin purity (%)`.
+  Do not write `Bin Purity (%)` in title case, and do not end an axis label with
+  a period.
 - **Check at 100 percent, on paper.** Print the page and read it at arm's length.
   A figure that survives a monochrome office printer survives anything.
 ---
@@ -434,8 +439,8 @@ Rule 6 of the Ten Simple Rules sets the mapping
   and name rainbow-like and red-green maps specifically ("The misuse of colour in
   science communication", Nature Communications 11:5444, 2020,
   https://www.nature.com/articles/s41467-020-19160-7).
-- Practical consequence: a red-green pairing is the worst possible two-series
-  choice, and it is the most common one. Use blue and vermilion.
+- Practical consequence: a red-green pairing is the one both sources name as
+  unreadable, and it stays common in ML papers. Use blue and vermilion.
 
 ### Redundant encoding, the non-negotiable
 
@@ -484,7 +489,8 @@ not on the figure in isolation.
   row's type is `Type 3`. arXiv asks for outline rather than bitmap fonts
   (https://info.arxiv.org/help/submit_pdf.html).
 - [ ] **`pdfinfo fig.pdf`**: the page size in points equals the design width
-  times 72 (3.25 in reads as 234 pts, 5.5 in as 396 pts).
+  times 72 (3.25 in reads as 234 pts, 5.5 in as 396 pts). A smaller number means
+  a tight bounding box cropped the page and LaTeX is scaling it back up.
 - [ ] **No rescaling in the include.** `\includegraphics[width=\columnwidth]` on
   a figure already built at column width scales by 1.0. Search the source for
   `scale=`, `height=`, and `width=0.` factors and fix each at the source figure.
@@ -550,8 +556,8 @@ five seeds. Two panels share the x axis: purity on the left, throughput on the
 right. A table would hide the crossover, which is the finding.
 
 **3. Size the canvas.** The paper targets ICML, so the column is 3.25 in wide.
-Two panels side by side would leave each 1.5 in, too narrow for 9 pt labels, so
-the figure spans both columns in a `figure*` at 6.75 in by 2.1 in.
+Two panels side by side would leave each about 1.6 in, too narrow for 9 pt
+labels, so the figure spans both columns in a `figure*` at 6.75 in by 2.1 in.
 
 **4. Build it.** The plotting script imports the Part 4.2 rcParams block, sets
 `figure.figsize` to `(6.75, 2.1)`, reads `results/purity_by_speed.csv`, and draws
@@ -623,8 +629,8 @@ corresponds to form one exhibit, and they are checked together.
   labels match that table's row names word for word. A mismatch means
   regenerating the figure, not rewording the caption.
 - **Decode every mark exactly once**, in the legend or the caption, never both.
-- **Do not duplicate.** A legend that repeats the caption wastes the canvas; a
-  caption that re-lists the legend wastes the reader.
+  A legend that repeats the caption wastes the canvas; a caption that re-lists
+  the legend wastes the reader.
 - **Hand off now.** Write the caption with the `caption-writing` skill in this
   repo: name the exhibit with a verbless noun phrase, decode the reading keys,
   land the claim as the closer. Then run `sentence-audit` over the caption and
