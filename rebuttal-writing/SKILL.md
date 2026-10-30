@@ -1,6 +1,6 @@
 ---
 name: rebuttal-writing
-description: Plan and write an academic rebuttal in two stages. Stage 1 triages the reviews, split them into atomic concerns, diagnose the doubt behind each, rate severity and decision impact, and produce a prioritized P0-P3 experiment plan. Stage 2 drafts the rebuttal from completed results using Direct Answer -> Evidence -> Revision. Use when reviews arrive, when deciding whether a rebuttal is worth the author's time, when ranking rebuttal experiments, or when drafting or quality-checking the response. Encodes the moves that actually raised scores in nine public OpenReview threads (inline numbers at the named concern, mirrored labels, a concession that narrows a claim, located revisions, a fast second round) and a recipe for short-form per-review venues with character limits and no links. Never fabricates results, reviewer intent, or manuscript locations.
+description: Plan and write an academic rebuttal in two stages. Stage 1 triages the reviews, splits them into atomic concerns, diagnoses the doubt behind each, rates severity and decision impact, and produces a prioritized P0-P3 experiment plan. Stage 2 drafts the rebuttal from completed results using Direct Answer -> Evidence -> Revision. Use when reviews arrive, when deciding whether a rebuttal is worth the author's time, when ranking rebuttal experiments, or when drafting or quality-checking the response. Encodes the moves present in nine public OpenReview threads where a reviewer raised a score, and a short-form recipe for per-review forms with character limits. Never fabricates results, reviewer intent, or manuscript locations.
 ---
 
 # Rebuttal writing (two-stage method)
@@ -21,11 +21,11 @@ is the better use of the remaining time.
   unknown, say the assessment is provisional.
 - **Read the live response form, not the call for papers.** Record: one
   response per review or one per paper; the limit, in characters or words;
-  whether Markdown, tables, links, or uploads are allowed; who reads each
+  whether Markdown, LaTeX, tables, links, or uploads are allowed; who reads each
   response; whether it stays editable until the deadline; the deadline with
-  its time zone; and whether a confidential channel to the chair exists. A
-  form that forbids links turns "see our repository" into a rejection, and a
-  per-review character limit fixes the shape of every answer before any
+  its time zone; and whether a confidential channel to the chair exists. Where
+  the form forbids links, "see our repository" is a violation, not an answer;
+  a per-review character limit fixes the shape of every answer before any
   experiment is chosen.
 - **Classify the situation:**
   - **Promising**: at least one advocate above the boundary, the negatives
@@ -116,7 +116,8 @@ marked).
    shared concerns into one response unless the venue format forbids it.
 5. **Open with a short summary** that names the strengths reviewers actually
    stated (never manufactured ones) and the two or three main concerns the
-   response will resolve.
+   response will resolve. This opener belongs to a global response; a
+   per-review block under a character limit has none.
 6. **Engage critics the way the paper engages rivals, credit, then
    contrast.** Concede what is right before contesting what is not: name the
    valid point in the concern, then the one axis where the evidence says
@@ -129,73 +130,77 @@ marked).
 8. **Keep the prose in house style:** short sentences (<= ~28 words), subject
    and verb early, no hedging "can/could" claims, every number attached to
    the exact thing it measures.
-9. **When over the limit, compress in this order:** repeated thanks, repeated
-   reviewer quotations, generic background, rhetorical adjectives, duplicated
-   responses, low-impact minors, implementation detail not needed to read the
-   evidence. Never cut direct answers, key numbers, controls, uncertainty,
+9. **When over the limit, run the trim ladder in `rebuttal-paragraph`:**
+   duplication, padding, ceremony, low-stakes promises, then content; under a
+   character limit the opening thanks and quoted reviewer sentences go first. Never cut direct answers, key numbers, controls, uncertainty,
    claim narrowing, or promised revisions.
 ## What moves scores
 
 Distilled from nine public OpenReview threads in which a reviewer raised a
-score after the response (eight 5→8 or 3→8 at ICLR 2024–2025, one 7→8 and
-8→9 at NeurIPS D&B 2022); the cases and what failed in the same threads are in
-`score-movers-guide.md`. Ranked by how often the move appeared.
+score after the response (eight 5→8 or 3→8 at ICLR 2024–2025; two raised
+to 8 and to 9 at NeurIPS D&B 2022, starting scores not recorded). The cases
+and what failed in the same threads are in `score-movers-guide.md`. Each move
+carries the count of threads in which it appeared.
 
-1. **A new number aimed at the named concern, stated inline** (9/9). Every
-   raise comment names a specific experiment or table; none names the thanks
-   or the prose. The number need not sit in a table or a revised PDF: one
-   5→8 came from two comments with the numbers inside the sentences.
+1. **A new number aimed at the named concern, stated inline** (9/9). It need
+   not sit in a table or a revised PDF.
 2. **The reviewer's own labels, point by point** (9/9). Verbatim quotation
-   was optional: four of the nine paraphrased the labels and were raised all
-   the same, at a fraction of the space.
+   is optional and costs space; four of the nine paraphrased the labels.
 3. **A concession that narrows a claim** (7/9): "will tone down", "You are
-   correct", an introduction rewritten so its claims match the results. In
-   one thread this alone was the raise; the first response, which argued
-   instead, had been refused with the three weaknesses repeated verbatim.
+   correct", an introduction rewritten so its claims match the results.
 4. **The location of every change** (7/9): appendix, table, figure, line.
    A promise with a location is a commitment; without one it is a hope.
-5. **A fast second round that admits any error outright** (5/9). In three
-   threads the reviewer named one deciding item ("one remaining") and raised
-   after it alone was resolved. Watch the thread after posting; answer within
-   a day; concede in one sentence what is wrong.
+5. **A fast second round that admits any error outright** (5/9). Where the
+   form allows follow-ups, watch the thread, answer before the window closes,
+   and concede in one sentence what is wrong.
 6. **The protocol behind a disputed number, not a defense of the number**
    (4/9): which checkpoint, which averaging, which compute match.
-7. **A global summary listing every new experiment** (6/9): read by the
-   chair, never cited by the raising reviewer. Where the venue has no global
-   response, the confidential comment to the chair is this summary.
-8. **Commitments accepted in lieu of results** (3/9), when paired with at
-   least one inline number.
+7. **A global summary listing every new experiment** (6/9): written for the
+   chair, never cited by the raising reviewer. Practice, not a finding: where
+   the form has no global response, repeat a one-sentence list of the new
+   experiments in each reply, and use a confidential channel for this only
+   where the venue's instructions allow it.
+8. **Commitments accepted in lieu of results** (3/9); in the clearest case
+   the promises sat beside inline numbers.
 
-Three of the nine papers were rejected anyway: a chair who reads
-"incomplete" or "incremental" in the other reviews is not moved by one
-reviewer's flip. Write the chair's summary as carefully as the replies.
+Three of the nine papers were rejected anyway; one decision read "the
+experiments seem still incomplete". One reviewer's flip does not move a chair
+who still sees a gap. Write the summary for the chair as carefully as the
+replies.
 
 ## Short-form venues
 
-Some forms allow one response per review, a limit of a few hundred or a few
-thousand characters, no tables that fit, and no links or uploads of any kind.
-The moves above still apply; the shape changes:
+Some forms allow one response per review under a limit of a few hundred to a
+few thousand characters; some also forbid links or uploads. Any one of these
+changes the shape. The moves above still apply, though none of the nine
+threads was written under such a form; the shape below is derived from them,
+not observed. It replaces the order in Stage 2 item 4 and the opener in
+item 5:
 
 1. One block per reviewer label, direct answer first, in the reviewer's own
-   order of severity.
-2. Two to four inline numbers, each with its denominator and the protocol in
-   a clause.
-3. One standalone concession sentence that narrows a claim.
+   numbering (W1, Q2, ...).
+2. Inline numbers, as many as the limit affords, each with its denominator
+   and the protocol in a clause ("same backbone, data split and compute
+   budget: X vs Y").
+3. One standalone concession sentence for each concern the ledger marks
+   conceded and narrowed; none where the ledger has no such entry.
 4. One commitment sentence naming what the final version will contain and
    where.
-5. No opening thanks beyond a clause, no paper summary, no verbatim quotes;
-   the reviewer's labels and three to six of their words in bold are enough.
+5. No opening thanks beyond a clause, no paper summary, no quoted reviewer
+   sentences; the reviewer's labels (or a two-word paraphrase where they gave
+   none) and three to six of their words, bold where the form renders
+   Markdown, are enough.
 6. The last sentence on the concern a chair would echo.
 7. Slack for the second round when the form stays editable: a reviewer who
    names "one remaining" item must be answerable without cutting the first
-   answer. A three-row Markdown table costs 250–350 characters; a placeholder
-   table with `XX.X` digits reserves the space so results drop in without
-   re-trimming.
+   answer. Reserve table space with placeholder digits (`rebuttal-paragraph`, axiom
+   18).
 
 ## Output modes
 
-- **TRIAGE_AND_EXPERIMENT_PLAN**: before results: viability verdict, claim
-  map from the abstract, concern matrix (ID / surface text / underlying doubt
+- **TRIAGE_AND_EXPERIMENT_PLAN**: before results: viability verdict, form
+  record (per-review or per-paper, limit, allowed markup, editability,
+  deadline, confidential channel), claim map from the abstract, concern matrix (ID / surface text / underlying doubt
   / severity / sharedness / confidence), P0-P3 plan, clarification bucket,
   time-budget suggestion, author result template, resubmission roadmap if
   return is low.
@@ -205,15 +210,19 @@ The moves above still apply; the shape changes:
 - **FULL_REBUTTAL**: the drafted response: opening summary, merged major
   responses, per-reviewer residuals, grouped minors, the manuscript revision
   list, and the word/character count against the venue limit. For a
-  per-review form: one block per review, each with its count against the
-  limit, placeholders visible, and the chair's summary drafted last.
+  per-review form: no opening summary; one block per review, each with its
+  count against the limit, placeholders visible, and, where the form has a
+  channel for it, the summary for the chair drafted last.
 - **RESUBMISSION_PLAN**: rejection-mechanism diagnosis, a
   preserve/change/remove table, a ranked revision backlog, the decisive
   experiments for the next submission, and the revised core story. Framed as
   the higher-return path, never as failure.
 - **QUALITY_REVIEW**: audit a drafted rebuttal for buried answers, wrong
   concern diagnosis, unsupported claims, missing uncertainty, tone risks,
-  unfulfilled promised revisions, and claim-scope mismatch.
+  unfulfilled promised revisions, claim-scope mismatch, links or uploads in a
+  no-link form, a block over its character limit, changes without a location,
+  concerns answered without the number that settles them, and unfilled
+  placeholders.
 ## Evidence and integrity rules (non-negotiable)
 
 - Never invent an experimental value, a reviewer quote, a citation, or a
@@ -231,13 +240,14 @@ The moves above still apply; the shape changes:
 Calm, precise, auditable. "We agree...", "We clarify...", "Our presentation
 may have obscured...", "We will narrow...". Never "the reviewer failed to
 understand", never speculation about motives, never pressure for score
-changes, no ceremonial thanks beyond the opener. Process complaints (a
+changes, thanks at most one clause in the opener, never inside a response, and the
+first thing cut under a character limit. Process complaints (a
 score-text mismatch, an unprofessional review) go through the confidential
 channel, factually, quoting only what is necessary, kept separate from the
 technical responses.
 
 ## Reference file
 
-- `score-movers-guide.md`: the nine threads behind "What moves scores", the
-  quotes from the reviewers who raised their scores, what failed in the same
-  threads, the short-form template, and the form-reconnaissance checklist.
+- `score-movers-guide.md`: the nine threads behind "What moves scores" (forum
+  and reviewer IDs, the raise comments, what the authors did), the evidence
+  behind each move, and what failed in the same threads.
